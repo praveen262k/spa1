@@ -15,6 +15,7 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
   grunt.loadNpmTasks('grunt-browser-sync');
+  //grunt.loadNpmTasks('karma-junit-reporter');
 
   // Define the configuration for all the tasks
   grunt.initConfig({
@@ -353,6 +354,14 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
+      },
+      continuous: {
+        configFile: 'karma.conf.js',
+        singleRun: true,
+        reporters: ['dots','junit'],
+        jnitReporter: {
+          outputFile: 'test-results.xml'
+        }
       }
     }
   });
@@ -402,6 +411,11 @@ module.exports = function (grunt) {
     'rev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('cibuild', [
+    'karma:continuous',
+    'build'
   ]);
 
   grunt.registerTask('default', [
