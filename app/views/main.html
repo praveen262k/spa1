@@ -1,0 +1,71 @@
+<div data-hmh-cw-header=""></div>
+
+<div class="row marketing">
+  <!-- 
+    http://hmh.guided.ss-omtrdc.net/?segment=All;mm=all;q=go%20math 
+    adult-education?i=1;q=*;q1=adult-education;q2=National;q3=Core+Curriculum;rank=Program_Revenue;segment=Programs;x1=t.t2;x2=versionState;x3=topic
+  -->
+<!--   <div>
+    <p>Total results found {{educators.resultcount.total}}</p>
+    <p>Total results found {{educators.resultset.results.length}}</p>
+  </div> -->
+<h1>Heading of the page can go here</h1>
+<div id="content" class="searchResultsStructure noFeature resultsComponents">
+
+  <div class="content_wrap search_results">
+    <div class="search_main_content">
+      <div class="search-results-header">
+        
+        <div class="bottom-search-meta">
+            <p class="display-range">Displaying <span>{{educators.resultcount.pagelower}}-{{educators.resultcount.pageupper}}</span> <span>({{educators.resultcount.total}})</span></p>
+            <div class="sort-by-wrap">
+                
+            </div>
+            <!-- Start /pagination-wrap -->
+            <div class="pagination-wrap">
+                <ul class="paginationNavigation"><li ng-repeat="page in educators.pagination.pages"><a class="active" href ng-click="paginate(page.page)" data-section="paging">{{page.page}}</a></li><a class="next" href="{{educators.pagination.next}}" data-section="pagingnext">NEXT &gt;&gt;</a></li></ul>
+            </div>
+            <!-- End /pagination-wrap -->
+        </div>
+
+        <div class="search-results-wrapper">
+          <div class="search-results-section" data-productid="" data-jsonattributename="SearchProducts" ng-repeat="result in educators.resultset.results">
+            <div class="item-image">
+              <a href="{{baseUrl}}{{result.path}}"><img class="itemImage" src="{{baseUrl}}{{result.thumbnailImage}}" alt="{{result.title}}"></a>
+            </div>
+            <div class="item-details">
+              <div class="item-title">
+                <h3><span class="restricted"></span><a href="{{baseUrl}}{{result.path}}">{{result.title}}</a></h3>
+              </div>
+              <p class="srSubTitle">
+      Reading Program</p>
+      <p style="margin-top:-13px;">{{result.programgrade}}</p>
+              <div class="item-category-grade">
+                <p></p>
+              </div>
+              <div class="item-description">
+                <p><span class="readmore-js-section" style="height: 48px;"> {{result.desc}} </span></p></div>
+                <p>... <a href="{{baseUrl}}{{result.path}}" class="moreLessLink">read more</a></p>
+            </div>
+            
+            <div class="shop-or-sample-wrap">
+             <!--<span class="itemPrice hideElemnt">
+                $<br/>
+                <span class="discount hideElemnt">$<br/></span>
+                <span class="srItemFormat"></span>
+            </span>-->
+              <div class="yellow-button-wrap ">
+               <ul>
+                <li class="gray"><a class="samplenow " href="{{baseUrl}}{{result.sampleURL}}">Sample Now<span></span></a></li>
+                <li class="orange"><a class="shopnow " href="{{baseUrl}}/{{result.buyNowUrl}}">Shop Now<span></span></a></li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
