@@ -1,11 +1,11 @@
 'use strict';
 
   app.controller('MainCtrl', function ($scope, $http) {
-    // $scope.awesomeThings = [
-    //   'HTML5 Boilerplate',
-    //   'AngularJS',
-    //   'Karma'
-    // ];
+    $scope.awesomeThings = [
+      'HTML5 Boilerplate',
+      'AngularJS',
+      'Karma'
+    ];
 
     // function init() {
     //     FB.init({
@@ -30,16 +30,19 @@
 
     var pageIdx = $scope.pageIndex;
 
-    if (pageIdx === undefined) {
+    if (pageIdx == undefined) {
     	pageIdx = 1;
     	$scope.pageIndex = 1;
     }
 
-	   $http.get('data/math.' + pageIdx + '.json').success(function(data) {
-    	$scope.educators = data;
+	  $http.get('data/math.' + pageIdx + '.json').success(function(data) {
+      setTimeout(function() {
+        console.log("Data loaded from service....");
+        $scope.educators = data;
+      }, 3000);      
   	});
 
-     $scope.authenticated = true;
+    $scope.authenticated = true;
 
     $scope.paginate = function(pageIdx) {
         console.log('Page index request for ', pageIdx);

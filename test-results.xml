@@ -1,14 +1,20 @@
 <?xml version="1.0"?>
 <testsuites>
-  <testsuite name="Chrome 34.0.1847 (Windows 7)" package="" timestamp="2014-05-16T20:46:16" id="0" hostname="BOS-C92NDS1" tests="2" errors="0" failures="1" time="0.033">
+  <testsuite name="Firefox 29.0.0 (Windows 7)" package="" timestamp="2014-05-21T17:02:38" id="0" hostname="BOS-C92NDS1" tests="2" errors="0" failures="0" time="0.022">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0"/>
+    </properties>
+    <testcase name="should attach a list of awesomeThings to the scope" time="0.019" classname="Firefox 29.0.0 (Windows 7).Controller: MainCtrl"/>
+    <testcase name="should do something" time="0.003" classname="Firefox 29.0.0 (Windows 7).Service: Contentapi"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+  <testsuite name="Chrome 34.0.1847 (Windows 7)" package="" timestamp="2014-05-21T17:02:38" id="0" hostname="BOS-C92NDS1" tests="2" errors="0" failures="0" time="0.031">
     <properties>
       <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36"/>
     </properties>
-    <testcase name="should attach a list of awesomeThings to the scope" time="0.029" classname="Chrome 34.0.1847 (Windows 7).Controller: MainCtrl">
-      <failure type="">TypeError: Cannot read property &apos;resultcount&apos; of undefined
-    at null.&lt;anonymous&gt; (C:/_dev/hmh/git/test/spec/controllers/main.js:20:27)
-</failure>
-    </testcase>
+    <testcase name="should attach a list of awesomeThings to the scope" time="0.027" classname="Chrome 34.0.1847 (Windows 7).Controller: MainCtrl"/>
     <testcase name="should do something" time="0.004" classname="Chrome 34.0.1847 (Windows 7).Service: Contentapi"/>
     <system-out><![CDATA[
 ]]></system-out>

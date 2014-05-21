@@ -7,6 +7,6 @@ angular.module('spa1App')
 	}
 );
 
-CuriousWorld.module.Registration.service('name', ['', function(){
+app.service('name', ['', function(){
 	
 }])
