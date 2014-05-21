@@ -35,9 +35,11 @@
     	$scope.pageIndex = 1;
     }
 
-	$http.get('data/math.' + pageIdx + '.json').success(function(data) {
+	   $http.get('data/math.' + pageIdx + '.json').success(function(data) {
     	$scope.educators = data;
   	});
+
+     $scope.authenticated = true;
 
     $scope.paginate = function(pageIdx) {
         console.log('Page index request for ', pageIdx);

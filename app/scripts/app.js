@@ -1,5 +1,8 @@
 'use strict';
 
+var CuriousWorld = CuriousWorld | {};
+CuriousWorld.modules = {};
+
 var app = angular
   .module('spa1App', [
     'ngCookies',
